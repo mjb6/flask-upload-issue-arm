@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<title>Upload Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+
+  {% with messages = get_flashed_messages(category_filter=["error"]) -%}
+      {% if messages -%}
+            {% for message in messages -%}
+            {{ message }}
+            {% endfor -%}
+      {% endif -%}
+  {% endwith -%}
+
+  {% with messages = get_flashed_messages(category_filter=["info"]) -%}
+      {% if messages -%}
+            {% for message in messages -%}
+            {{ message }}
+            {% endfor -%}
+      {% endif -%}
+  {% endwith -%}
+
+  {% block content %}
+  {% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,4 @@
+__pycache__
+*.pyc
+/static/upload-data/
+/.vscode/.ropeproject/
